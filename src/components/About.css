@@ -1,0 +1,348 @@
+
+/* AboutPage.css with matching wave and elite styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* Using the same base variables as HomePage.css for consistency */
+:root {
+  --primary: #9b87f5;
+  --primary-glow: rgba(155, 135, 245, 0.5);
+  --secondary: #1EAEDB;
+  --accent: #8B5CF6;
+  --dark-bg: #1A1F2C;
+  --darker-bg: #131622;
+  --light-text: #FFFFFF;
+  --mid-text: #D6BCFA;
+  --card-bg: rgba(26, 31, 44, 0.8);
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Reusing the wave and container styles from HomePage.css */
+.futuristic-container, .wave-container, .wave, .hexagon-container, .floating-hexagon,
+.neo-header, .header-content, .logo-container, .logo-icon, .header-title, .highlight,
+.nav-links, .nav-link, .neo-footer, .footer-content, .footer-text, .footer-divider, .copyright,
+.glowing-line {
+  /* These styles are identical to HomePage.css */
+}
+
+/* Animations - copied from HomePage.css for consistency */
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.8); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 0.2; }
+  100% { transform: scale(0.8); opacity: 0.5; }
+}
+
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes spin-reverse {
+  from { transform: translate(-50%, -50%) rotate(360deg); }
+  to { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+/* About Section Specific Styles */
+.about-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 8rem 3rem 4rem;
+  position: relative;
+  z-index: 5;
+}
+
+.about-content {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--light-text), var(--mid-text));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glowing-line {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), transparent);
+  margin: 0 auto 1.5rem;
+}
+
+.glowing-line.small {
+  width: 60px;
+  margin-bottom: 2rem;
+}
+
+.about-card {
+  background: rgba(26, 31, 44, 0.6);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  padding: 2.5rem;
+  margin-bottom: 4rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.mission-vision {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: l.5rem;
+}
+
+.mission-container {
+  flex: 1;
+}
+
+.about-visual {
+  flex-shrink: 0;
+}
+
+.section-subtitle {
+  font-size: 1.8rem;
+  color: var(--light-text);
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-subtitle::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background: linear-gradient(90deg, var(--primary), transparent);
+}
+
+.about-text {
+  font-size: 1.1rem;
+  color: var(--mid-text);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.about-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Team Section Styles */
+.team-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.team-card {
+  background: rgba(26, 31, 44, 0.6);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  padding: 2rem;
+  width: 280px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(155, 135, 245, 0.3);
+}
+
+.team-card:hover .card-glow {
+  opacity: 1;
+}
+
+.team-image-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  overflow: hidden;
+}
+
+.team-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+}
+
+.image-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 15px var(--primary-glow);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-card:hover .image-glow {
+  opacity: 1;
+}
+
+.team-name {
+  font-size: 1.4rem;
+  color: var(--light-text);
+  margin-bottom: 0.5rem;
+}
+
+.team-role {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.card-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(155, 135, 245, 0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Orbit animations for the atom icon from HomePage */
+.tech-circle {
+  width: 180px;
+  height: 180px;
+  position: relative;
+}
+
+.circle-content {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.atom-icon {
+  color: white;
+  animation: spin 10s linear infinite;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(155, 135, 245, 0.3);
+  border-radius: 50%;
+}
+
+.orbit1 {
+  width: 120px;
+  height: 120px;
+  animation: spin 15s linear infinite;
+}
+
+.orbit2 {
+  width: 150px;
+  height: 150px;
+  animation: spin-reverse 20s linear infinite;
+}
+
+.orbit3 {
+  width: 180px;
+  height: 180px;
+  animation: spin 25s linear infinite;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .mission-vision {
+    flex-direction: column;
+  }
+  
+  .tech-circle {
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 7rem 1.5rem 3rem;
+  }
+  
+  .about-card {
+    padding: 1.5rem;
+  }
+  
+  .about-title {
+    font-size: 2.2rem;
+  }
+  
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    margin-top: 0.5rem;
+  }
+}
