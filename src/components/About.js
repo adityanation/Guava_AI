@@ -8,14 +8,14 @@ const AboutPage = () => {
   // Sample team member data - replace with actual images when available
   const teamMembers = [
     {
-      name: "Muhriz Khan",
+      name: "Aditya Sinha",
       role: "ML and Backend Developer",
-      image: "https://media.licdn.com/dms/image/v2/D5603AQE2n6NluYKPdA/profile-displayphoto-shrink_800_800/B56ZZEly8.GcAc-/0/1744907482751?e=1750896000&v=beta&t=h4nzl8ZsK6Bg1N5V51ph3jkUNUTZkxtXvsA01qCp8AU"
+      image: "https://avatars.githubusercontent.com/u/149078925?v=4"
     },
     {
-      name: "Hari Balaji",
+      name: "Sarthak Sisodia",
       role: "ML and React Developer",
-      image: "https://media.licdn.com/dms/image/v2/D5603AQEmgn1cLDHB_w/profile-displayphoto-shrink_800_800/B56ZZEqCKEHQAc-/0/1744908593018?e=1750896000&v=beta&t=cpckf19saRV3SRArs1RBI4a3eiB1RwFRBeXTaGQ2tks"
+      image: "https://media.licdn.com/dms/image/v2/D5603AQG9t68EZ6HKlA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1718530540208?e=1751500800&v=beta&t=6sqHy3dPjQY-38lFND1deTWqMvVwisMwv7pcQpNx694"
     }
   ];
 
