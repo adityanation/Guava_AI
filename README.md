@@ -51,11 +51,7 @@ pip install -r requirements.txt
 The model is trained on a custom dataset of guava images collected from open-source datasets and field research.
 It contains images of healthy, Anthracnose-infected, and Fruit Fly-infected guavas.
 
-### ML Model
-Architecture: CNN (Convolutional Neural Network)
-Framework: TensorFlow & Keras
-Training: The model is trained on Google Colab using GPU acceleration
-Accuracy: Achieved 90%+ accuracy on test data
+
 
 
 ## Deployment
